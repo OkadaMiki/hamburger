@@ -1,0 +1,106 @@
+/* 前提 */
+html {
+    font-size: 62.5%;
+}
+body {
+    width: 390px;
+    height: auto;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* header */
+div.headarea{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background: skyblue;
+    align-items: center;
+}
+div.headarea>h1>a{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+/* hamburger */
+div.hamburger{
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background: lightseagreen;
+    border-radius: 50%;
+}
+div.hamburger>span{
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    left: 12px;
+    background: #333;
+    transition: .5s;
+}
+div.hamburger>span:first-child{
+    top: 15px;
+}
+div.hamburger>span:nth-child(2){
+    top: 24px;
+}
+div.hamburger>span:last-child{
+    top: 33px;
+}
+/* slide */
+ul.slide{
+    width: 100%;
+    background: rgba(33, 33, 33, 0.6);
+    transform: translateX(100%);
+    transition: .5s;
+}
+ul.slide>li{
+    line-height: 4;
+    text-align: center;
+}
+ul.slide>li>a:link,
+ul.slide>li>a:hover,
+ul.slide>li>a:visited{
+    color: #fff;
+}
+/* active */
+div.hamburger.active>span:first-child{
+    transform: rotate(45deg);
+    top: 24px;
+    left: 12px;
+}
+div.hamburger.active>span:nth-child(2){
+    opacity: 0;
+}
+div.hamburger.active>span:last-child{
+    transform: rotate(-45deg);
+    top: 24px;
+    left: 12px;
+}
+ul.slide.active{
+    transform: translateX(0);
+}
+
+/* main */
+main{
+    width: 100%;
+    height: 500px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: auto;
+    background: #333;
+}
+footer>p{
+    text-align: center;
+    line-height: 3;
+    color: #eee;
+}
+
